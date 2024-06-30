@@ -76,3 +76,62 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  src: url("../../public/assets/fonts/SFNS.woff2") format("woff2-variations");
+  font-family: "SF Pro";
+  font-style: normal;
+}
+@font-face {
+  src: url("../../public/assets/fonts/SFNSItalic.woff2")
+    format("woff2-variations");
+  font-family: "SF Pro";
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../../public/assets/fonts/SFNSRounded.woff2")
+    format("woff2-variations");
+  font-family: "SF Rounded";
+  font-style: normal;
+}
+
+.SFPro {
+  font-family: "SF Pro";
+}
+
+/* ------------------------------------------------------------------------ */
+
+.search-container {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.dropdown-container {
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid;
+  border-color: hsl(var(--border));
+  margin-top: 0.5rem;
+  & > ul > li {
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    border-radius: 4px;
+    &:hover {
+      background: hsl(var(--muted) / 0.6);
+      color: white;
+    }
+  }
+  & .link {
+    display: flex;
+    color: hsl(var(--muted-foreground));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
