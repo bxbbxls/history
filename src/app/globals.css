@@ -226,10 +226,18 @@ select:focus-visible {
     background: hsl(var(--muted) / 0.6);
     color: hsl(var(--muted-foreground));
     border: hsl(var(--border)) 1px solid;
-    border-radius: 99px;
+    border-radius: 100px;
     font-size: 0.875rem;
     padding-inline: 7px;
     padding-block: 2px;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .topics-container {
+    & .topics-container-item {
+      border-radius: 10px;
+    }
   }
 }
 
@@ -262,5 +270,79 @@ select:focus-visible {
       background: hsl(var(--muted) / 0.5);
       border: hsl(var(--border)) 1px solid;
     }
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.circle-404 {
+  animation: rotate-scale 5s infinite;
+  border-radius: 100px;
+  z-index: -5;
+  filter: blur(50px);
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  width: 10rem;
+  height: 10rem;
+  & .animate-move-up {
+    animation: move-up 3s infinite;
+  }
+
+  & .animate-move-right {
+    animation: move-right 3s infinite;
+  }
+
+  & .animate-move-left {
+    animation: move-left 3s infinite;
+  }
+}
+
+@keyframes rotate-scale {
+  0% {
+    transform: rotate(calc(0deg + var(--rotate-offset, 0deg))) scale(1);
+  }
+  25% {
+    transform: rotate(calc(5deg + var(--rotate-offset, 0deg))) scale(1.05);
+  }
+  50% {
+    transform: rotate(calc(-5deg + var(--rotate-offset, 0deg))) scale(1.05);
+  }
+  100% {
+    transform: rotate(calc(0deg + var(--rotate-offset, 0deg))) scale(1);
   }
 }

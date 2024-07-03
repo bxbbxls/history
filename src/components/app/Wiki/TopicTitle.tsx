@@ -6,12 +6,14 @@ import { useState } from "react";
 const img = "/assets/IMG_1585.jpg";
 
 export default function TopicTitle({
+  hover = false,
   title,
   children,
   src,
   className,
   href,
 }: {
+  hover?: boolean;
   title: string;
   children?: React.ReactNode;
   src?: string;
@@ -34,16 +36,17 @@ export default function TopicTitle({
     }, 250);
   };
 
+  const whileHoverStyles = hover
+  ? { translateY: 20, scale: 10 }  // if hover is true
+  : { translateY: 0, scale: 1 };   // if hover is false
+
   return (
     <a
       href={href}
       className="bg-muted/70 text-muted-foreground rounded-full border p-0.5 w-fit flex items-center gap-1.5 pr-3.5"
     >
       <motion.div
-        whileHover={{
-          translateY: 20,
-          scale: 10,
-        }}
+        whileHover={whileHoverStyles}
         style={{
           zIndex: 21,
         }}
