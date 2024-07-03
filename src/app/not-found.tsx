@@ -1,3 +1,4 @@
+import Button from "@/components/app/Button";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -13,14 +14,11 @@ export default function NotFound() {
             &nbsp; &nbsp;&nbsp;じしˍ,)&#x30CE;
           </p>
         </div>
-        <div className="font-rounded">
-          <p>This page doesn&apos;t exist</p>
-          <Link
-            href="/"
-            className="text-muted-foreground hover:text-primary transition-all duration-300 ease-in-out"
-          >
-            Return
-          </Link>
+        <div className="font-rounded flex flex-col gap-2 items-center justify-center text-center">
+          <p>this page doesn&apos;t exist</p>
+          <Button className="text-sm w-fit">
+            <Link href="/">Return</Link>
+          </Button>
         </div>
       </div>
 

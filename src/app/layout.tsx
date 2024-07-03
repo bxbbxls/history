@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/app/Navbar";
 
 export const metadata: Metadata = {
   title: "Historia",
@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={"SFPro"}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

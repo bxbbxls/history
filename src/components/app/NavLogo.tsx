@@ -35,7 +35,7 @@ export default function NavLogo() {
     <>
       <button
         onMouseEnter={handleHover}
-        className="hover:scale-[1.05] transition-all z-30 cursor-pointer px-3 py-1 border rounded-full select-none hover:bg-muted-foreground/10 active:scale-95 duration-300 hover:drop-shadow-sm"
+        className="hover:scale-[1.05] transition-all z-30 cursor-pointer text-foreground px-3 py-1 bg-full border rounded-full select-none hover:bg-muted-foreground/10 active:scale-95 duration-300 hover:drop-shadow-sm"
       >
         <Link className="select-none" href="/">
           Historia

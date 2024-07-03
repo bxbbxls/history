@@ -1,13 +1,16 @@
 "use client";
 import { WikiSearch } from "@/lib/utils";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Search() {
   const [wiki, setWikiData] = useState<any>(null);
   const [query, setQuery] = useState("");
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const action = "query";
   const lang = "en";
+  const inputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     const getWikiData = async () => {
       if (query) {
@@ -17,6 +20,7 @@ export default function Search() {
     };
     getWikiData();
   }, [query]);
+
   const handleSearch = () => {
     const getWikiData = async () => {
       if (query) {
@@ -29,20 +33,23 @@ export default function Search() {
 
   return (
     <div className="relative">
-      <div className="flex flex-col justify-center w-[25rem] max-w-[25rem]">
+      <div className="flex flex-col justify-center max-w-[25rem]">
         <div className="search-container">
           <button
-            className="bg-full drop-shadow-sm px-3 py-1 border rounded-full select-none text-muted-foreground"
+            className="bg-full drop-shadow-sm px-3 py-1 border rounded-full select-none text-muted-foreground dark:text-foreground"
             onClick={handleSearch}
           >
             Search
           </button>
           <input
-            className="bg-full drop-shadow-sm py-1 pl-4 w-full rounded-full border placeholder:text-muted-foreground"
+            className="bg-full drop-shadow-sm py-1 pl-4 w-full rounded-full border placeholder:text-muted-foreground dark:placeholder:text-foreground/30 placeholder:select-none focus-visible:outline-blue-400"
             placeholder="Search Historia..."
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            ref={inputRef}
+            onFocus={() => setIsInputFocused(true)}
+            onBlur={() => setIsInputFocused(false)}
           />
         </div>
         {wiki?.query?.search && (
@@ -55,7 +62,7 @@ export default function Search() {
                       <Link
                         className="link"
                         target="_blank"
-                        href={/wiki/ + result.pageid}
+                        href={`/wiki/${result.pageid}`}
                       >
                         {result.title
                           .split("(")
