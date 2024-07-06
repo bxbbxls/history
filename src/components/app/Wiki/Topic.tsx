@@ -33,7 +33,7 @@ const Topic: FC<{ children: ReactNode }> = ({ children }) => {
     >
       {defaultContent}
       <AnimatePresence>
-        {isHovering && hoverContent && (
+         {isHovering && hoverContent && ( 
           <motion.div
             id="info-contain"
             initial={{ opacity: 0, scale: 0, x: "-45%", y: "-45%" }}
@@ -60,8 +60,9 @@ const Topic: FC<{ children: ReactNode }> = ({ children }) => {
             className="z-20 p-[10px] pb-[5px] mt-9 w-max max-w-80 overflow-auto absolute top-0 left-0 dark:bg-[#191919] bg-[#f9f9f9] text-foreground/80 border rounded-2xl shadow-lg"
           >
             {hoverContent}
+            <div className="absolute bottom-3 left-[42%] right-[100%] h-[.25rem] w-[15%] rounded-full bg-foreground/25"/>
           </motion.div>
-        )}
+         )} 
       </AnimatePresence>
     </motion.div>
   );

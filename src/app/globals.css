@@ -226,18 +226,10 @@ select:focus-visible {
     background: hsl(var(--muted) / 0.6);
     color: hsl(var(--muted-foreground));
     border: hsl(var(--border)) 1px solid;
-    border-radius: 100px;
+    border-radius: 10px;
     font-size: 0.875rem;
     padding-inline: 7px;
     padding-block: 2px;
-  }
-}
-
-@media not all and (min-width: 768px) {
-  .topics-container {
-    & .topics-container-item {
-      border-radius: 10px;
-    }
   }
 }
 

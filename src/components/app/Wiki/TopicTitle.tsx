@@ -40,6 +40,10 @@ export default function TopicTitle({
   ? { translateY: 20, scale: 10 }  // if hover is true
   : { translateY: 0, scale: 1 };   // if hover is false
 
+  const style = hover
+  ? { zIndex: 21 }
+  : { zIndex: 15 };
+
   return (
     <a
       href={href}
@@ -47,22 +51,20 @@ export default function TopicTitle({
     >
       <motion.div
         whileHover={whileHoverStyles}
-        style={{
-          zIndex: 21,
-        }}
+        style={style}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <Image
           className={`rounded-full aspect-square object-cover bg-border grid justify-center items-center border border-transparent ${
-            isHovering ? "border shadow-lg" : ""
+            isHovering && hover ? "border shadow-lg" : ""
           }`}
           width={25}
           height={25}
           src={src}
           quality={100}
           alt={`Image of ${title}`}
-          unoptimized={isHovering}
+          unoptimized={isHovering && hover}
         />
       </motion.div>
       {title}
