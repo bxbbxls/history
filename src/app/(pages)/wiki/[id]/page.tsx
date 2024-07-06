@@ -20,6 +20,7 @@ import Topic, {
 import TopicTitle from "@/components/app/Wiki/TopicTitle";
 import { processData } from "@/lib/ai/processData";
 import ReactMarkdown from "react-markdown";
+import Head from "next/head";
 
 export default function WikiID({ params }: { params: { id: string } }) {
   const { id } = params;
@@ -34,7 +35,6 @@ export default function WikiID({ params }: { params: { id: string } }) {
       setJsonData(data);
       setLoading(false);
     }
-
     fetchData();
   }, [id]);
 
@@ -56,17 +56,22 @@ export default function WikiID({ params }: { params: { id: string } }) {
   }
 
   if (!jsonData) {
-    return <div className="flex min-h-screen flex-col items-center justify-center">
-    <p>Error loading data</p>
-    <Button>
-      <Link href={`/wiki/${id}`}>Reload</Link>
-    </Button>
-  </div>
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center">
+        <p>Error loading data</p>
+        <Button>
+          <Link href={`/wiki/${id}`}>Reload</Link>
+        </Button>
+      </div>
+    );
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 max-sm:pt-2">
       <DevAlert>Page Data Loaded</DevAlert>
+      <Head>
+        <title>Hello</title>
+      </Head>
       <div className="flex-col flex gap-4">
         <div className="wiki-container">
           <div className="flex flex-col">
@@ -86,7 +91,8 @@ export default function WikiID({ params }: { params: { id: string } }) {
                       This information is courtesy of{" "}
                       <Link
                         className="text-[hsl(var(--theme))]"
-                        href="wikipedia.org"
+                        target="_blank"
+                        href="https://en.wikipedia.org/wiki/Main_Page"
                       >
                         Wikipedia®
                       </Link>
@@ -111,29 +117,37 @@ export default function WikiID({ params }: { params: { id: string } }) {
               <div className="topics-container topic-figures">
                 {jsonData?.significant_figures.map(
                   (figure: any, index: number) => (
-                    <Topic key={index}>
+                    <Topic href={figure.name} key={index}>
                       <TopicTitle
                         title={figure.name}
                         className="z-30"
                         src={
-                          figure.image ? figure.image : "/assets/abraham.jpg"
+                          figure.image
+                            ? figure.image
+                            : "/assets/avatar_placeholder.png"
                         }
                       />
                       <TopicContent>
                         <TopicImage
                           title="Abraham Lincoln"
-                          src="/assets/abraham.jpg"
+                          src={
+                            figure.image
+                              ? figure.image
+                              : "/assets/avatar_placeholder.png"
+                          }
                         />
                         <TopicSub title="Role">
-                          <p>{figure.role}</p>
+                          <p className="leading-[1.1] pb-1">{figure.role}</p>
                         </TopicSub>
                         <TopicSub title="Born">
-                          <p>
+                          <p className="leading-[1.1] pb-1">
                             {figure.birth_year}, {figure.country}
                           </p>
                         </TopicSub>
                         <TopicSub title="Died">
-                          <p>{figure.death_year}</p>
+                          <p className="leading-[1.1] pb-1">
+                            {figure.death_year}
+                          </p>
                         </TopicSub>
                       </TopicContent>
                     </Topic>
@@ -144,7 +158,7 @@ export default function WikiID({ params }: { params: { id: string } }) {
               <div className="topics-container topic-locations">
                 {jsonData?.major_events.map((event: any, index: number) => (
                   <ReactMarkdown className="topics-container-item" key={index}>
-                    {event.description}
+                    {event}
                   </ReactMarkdown>
                 ))}
               </div>

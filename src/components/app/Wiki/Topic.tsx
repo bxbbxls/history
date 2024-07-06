@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   useState,
   FC,
@@ -9,8 +10,12 @@ import {
   isValidElement,
   cloneElement,
 } from "react";
+import { AiOutlineSearch } from "react-icons/ai";
 
-const Topic: FC<{ children: ReactNode }> = ({ children }) => {
+const Topic: FC<{ children: ReactNode; href: string }> = ({
+  children,
+  href,
+}) => {
   const [isHovering, setIsHovering] = useState(false);
 
   let defaultContent: ReactNode[] = [];
@@ -33,7 +38,7 @@ const Topic: FC<{ children: ReactNode }> = ({ children }) => {
     >
       {defaultContent}
       <AnimatePresence>
-         {isHovering && hoverContent && ( 
+        {isHovering && hoverContent && (
           <motion.div
             id="info-contain"
             initial={{ opacity: 0, scale: 0, x: "-45%", y: "-45%" }}
@@ -60,9 +65,15 @@ const Topic: FC<{ children: ReactNode }> = ({ children }) => {
             className="z-20 p-[10px] pb-[5px] mt-9 w-max max-w-80 overflow-auto absolute top-0 left-0 dark:bg-[#191919] bg-[#f9f9f9] text-foreground/80 border rounded-2xl shadow-lg"
           >
             {hoverContent}
-            <div className="absolute bottom-3 left-[42%] right-[100%] h-[.25rem] w-[15%] rounded-full bg-foreground/25"/>
+            <div className="absolute bottom-3 left-[42%] right-[100%] h-[.25rem] w-[15%] rounded-full bg-foreground/25" />
+            <Link
+              target="_blank"
+              href={`https://en.wikipedia.org/w/index.php?search=${href}`}
+            >
+              <AiOutlineSearch className="absolute bottom-3 right-3 size-[1.75rem] p-1 rounded-full fill-muted-foreground hover:bg-foreground/25 cursor-pointer transition-colors duration-200 ease-in-out" />
+            </Link>
           </motion.div>
-         )} 
+        )}
       </AnimatePresence>
     </motion.div>
   );
@@ -79,20 +90,20 @@ export const TopicSub: FC<{ title: string; children: ReactNode }> = ({
 }) => {
   return (
     <>
-      <p className="details-title !pb-0 mb-[-5px]">{title}</p>
+      <p className="details-title !pb-0 mb-[-2.5px]">{title}</p>
       <div>{children}</div>
     </>
   );
 };
 
-export const TopicImage: FC<{ title: string; src: ReactNode }> = ({
+export const TopicImage: FC<{ title: string; src: string }> = ({
   title,
   src,
 }) => {
   return (
     <>
       <Image
-        className="select-none rounded-[6px] aspect-video object-cover bg-border grid justify-center items-center border border-transparent w-full mb-1"
+        className="select-none rounded-[6px] object-cover bg-border grid justify-center items-center border border-transparent w-full mb-1"
         width={300}
         height={100}
         src={src}

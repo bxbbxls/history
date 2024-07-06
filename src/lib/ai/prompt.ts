@@ -71,7 +71,7 @@ JSON example 2:
    "birth_year": 1929,
    "death_year": 1968,
    "country": "United States",
-   "image":
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Martin_Luther_King%2C_Jr._and_Mathew_Ahmann_in_a_crowd.%29_-_NARA_-_542015_-_Restoration.jpg/220px-Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Martin_Luther_King%2C_Jr._and_Mathew_Ahmann_in_a_crowd.%29_-_NARA_-_542015_-_Restoration.jpg"
   },
   {
    "name": "Rosa Parks",
@@ -79,7 +79,7 @@ JSON example 2:
    "birth_year": 1913,
    "death_year": 2005,
    "country": "United States",
-   "image":
+   "image": "https://en.wikipedia.org/wiki/File:Rosa_Parks_being_fingerprinted_by_Deputy_Sheriff_D.H._Lackey_after_being_arrested_on_February_22,_1956,_during_the_Montgomery_bus_boycott.jpg"
   },
   {
    "name": "Malcolm X",
@@ -87,7 +87,7 @@ JSON example 2:
    "birth_year": 1925,
    "death_year": 1965,
    "country": "United States",
-   "image":
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/MLK_and_Malcolm_X_USNWR_cropped.jpg/220px-MLK_and_Malcolm_X_USNWR_cropped.jpg"
   },
   {
    "name": "John Lewis",
@@ -95,7 +95,7 @@ JSON example 2:
    "birth_year": 1940,
    "death_year": 2020,
    "country": "United States",
-   "image":
+   "image": ""
   },
   {
    "name": "Medgar Evers",
@@ -103,7 +103,7 @@ JSON example 2:
    "birth_year": 1925,
    "death_year": 1963,
    "country": "United States",
-   "image":
+   "image": ""
   }
  ],
  "major_events": [
@@ -154,4 +154,4 @@ Max countries: 5
 Max significant figures: 5
 Max major events: 3
 
-Ensure the data is accurate, detailed, and well-structured to provide a thorough understanding of each historic topic.`
+Ensure the data is accurate, detailed, and well-structured to provide a thorough understanding of each historic topic.`;

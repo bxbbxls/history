@@ -1,0 +1,87 @@
+{
+  "historic_event_name": "Civil Rights Movement",
+  "quick_summary": "The Civil Rights Movement was a campaign from 1954 to 1968 in the United States to abolish legalized racial segregation, discrimination, and disenfranchisement.  It grew from the Reconstruction era after the Civil War, with roots in the 1940s, and made its greatest legislative gains in the 1960s.  It was characterized by nonviolent resistance and civil disobedience, and succeeded in securing new legal protections for the civil rights of all Americans.",
+  "countries": ["United States"],
+  "year": "1954-1968",
+  "significant_figures": [
+    {
+      "name": "Martin Luther King Jr.",
+      "role": "Civil rights leader and activist",
+      "birth_year": 1929,
+      "death_year": 1968,
+      "country": "United States",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Martin_Luther_King%2C_Jr._and_Mathew_Ahmann_in_a_crowd.%29_-_NARA_-_542015_-_Restoration.jpg/220px-Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Martin_Luther_King%2C_Jr._and_Mathew_Ahmann_in_a_crowd.%29_-_NARA_-_542015_-_Restoration.jpg"
+    },
+    {
+      "name": "Rosa Parks",
+      "role": "Activist whose refusal to give up her seat on a bus sparked the Montgomery bus boycott",
+      "birth_year": 1913,
+      "death_year": 2005,
+      "country": "United States",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Rosa_Parks_being_fingerprinted_by_Deputy_Sheriff_D.H._Lackey_after_being_arrested_on_February_22%2C_1956%2C_during_the_Montgomery_bus_boycott.jpg"
+    },
+    {
+      "name": "Malcolm X",
+      "role": "Black nationalist and activist",
+      "birth_year": 1925,
+      "death_year": 1965,
+      "country": "United States",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/MLK_and_Malcolm_X_USNWR_cropped.jpg/220px-MLK_and_Malcolm_X_USNWR_cropped.jpg"
+    },
+    {
+      "name": "John Lewis",
+      "role": "Civil rights leader and activist",
+      "birth_year": 1940,
+      "death_year": 2020,
+      "country": "United States",
+      "image": ""
+    },
+    {
+      "name": "Medgar Evers",
+      "role": "Civil rights activist, field secretary of the Mississippi NAACP",
+      "birth_year": 1925,
+      "death_year": 1963,
+      "country": "United States",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Medgar_Evers_press_photo.jpg"
+    }
+  ],
+  "major_events": [
+    "The Montgomery Bus Boycott (1955-1956)",
+    "The March on Washington for Jobs and Freedom (1963)",
+    "The Selma to Montgomery Marches (1965)"
+  ],
+  "causes": "The Civil Rights Movement was spurred by centuries of racism and segregation in the United States.  This included the enslavement of millions of Africans, the disenfranchisement of African Americans after the Reconstruction era, the establishment of Jim Crow laws, and the pervasive discrimination and violence against African Americans in the South.  The Brown v. Board of Education Supreme Court decision in 1954, which declared segregation in public schools unconstitutional, fueled a sense of hope and urgency among African Americans.  Further, the murder of Emmett Till in 1955 highlighted the brutality faced by African Americans in the South, galvanizing the movement. ",
+  "consequences": "The Civil Rights Movement had a profound impact on American society, leading to the passage of landmark legislation: The Civil Rights Act of 1964 banned discrimination on the basis of race, color, religion, sex or national origin in employment practices and public accommodations. The Voting Rights Act of 1965 aimed to overcome legal barriers to voting, especially in the South. The Civil Rights Act of 1968 outlawed discrimination in housing.  The movement's success brought about the end of legal segregation in the United States and led to greater political participation and representation for African Americans.  However, the movement also resulted in a backlash from white segregationists, including violence and resistance. ",
+  "full_explanation": "The Civil Rights Movement, a significant period in American history, was a social movement and campaign that fought against racial segregation, discrimination, and disenfranchisement in the United States. It had its roots in the Reconstruction era following the Civil War and gained momentum in the 1940s. While its most visible activities took place in the 1960s, the movement's successes were a culmination of decades of grassroots organizing, legal battles, and direct action. The movement's history is intricately interwoven with the legacy of slavery and its aftermath.",
+  "important_dates": [
+    {
+      "date": "May 17, 1954",
+      "event": "The Supreme Court rules in *Brown v. Board of Education* that racial segregation in public schools is unconstitutional."
+    },
+    {
+      "date": "December 1, 1955",
+      "event": "Rosa Parks is arrested for refusing to give up her seat on a bus in Montgomery, Alabama, sparking the Montgomery bus boycott."
+    },
+    {
+      "date": "August 28, 1963",
+      "event": "The March on Washington for Jobs and Freedom takes place, with Martin Luther King Jr. delivering his 'I Have a Dream' speech."
+    },
+    {
+      "date": "July 2, 1964",
+      "event": "President Lyndon B. Johnson signs the Civil Rights Act of 1964 into law, outlawing discrimination based on race, color, religion, sex, or national origin."
+    },
+    {
+      "date": "August 6, 1965",
+      "event": "President Lyndon B. Johnson signs the Voting Rights Act of 1965 into law, aiming to overcome legal barriers to voting."
+    },
+    {
+      "date": "April 4, 1968",
+      "event": "Martin Luther King Jr. is assassinated in Memphis, Tennessee."
+    },
+    {
+      "date": "April 11, 1968",
+      "event": "President Lyndon B. Johnson signs the Civil Rights Act of 1968 (Fair Housing Act) into law, outlawing discrimination in housing."
+    }
+  ],
+  "impact": "The Civil Rights Movement had a lasting impact on American society, transforming the nation's legal and social landscape. It resulted in the end of legal segregation, increased political representation for African Americans, and a greater awareness of racial injustice.  The movement's legacy continues to inspire activism and social change, with its principles of nonviolent resistance and the pursuit of equality serving as a guiding force for future generations."
+}

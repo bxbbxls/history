@@ -41,7 +41,7 @@ export default function NavLogo() {
           Historia
         </Link>
       </button>
-      <div className="absolute left-0 top-0 z-20">
+      <div className="absolute left-0 top-0 z-20 ">
         <Confetti active={isExploding} config={confettiConfig} />
       </div>
     </>
