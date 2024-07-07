@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Historia
 
-## Getting Started
+# Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm i
+# or
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +22,35 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Dev Notes
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Fonts
 
-## Learn More
+Default Font is SF Pro which is used with the ".SFPro" class
+The rounded font is SF Pro Rounded which is used with the ".font-rounded" class
 
-To learn more about Next.js, take a look at the following resources:
+## References
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Wiki API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Main Page](https://www.mediawiki.org/wiki/API:Main_page)
 
-## Deploy on Vercel
+[Opensearch](https://www.mediawiki.org/wiki/API:Opensearch#JavaScript)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Search](https://www.mediawiki.org/wiki/API:Search#JavaScript)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[API sandbox](https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&prop=&list=search%7Ccategorymembers&continue=-%7C%7C&utf8=1&formatversion=2&srsearch=wheel&sroffset=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet%7Credirectsnippet&cmtitle=Category%3AHistory&cmcontinue=page%7C343a36524c320306383a4e50464c3a2e2a4004343a36524c32011c01dcc0dc14%7C11325429)
+
+[History Category](https://en.wikipedia.org/wiki/Category:History)
+
+### React DOM Confetti
+
+[Demo](https://daniel-lundin.github.io/react-dom-confetti/)
+
+### ShadCN
+
+[Docs](https://ui.shadcn.com/docs)
+
+---
